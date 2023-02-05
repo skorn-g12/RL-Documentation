@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Read the Docs tutorial &mdash; Feuer.AI  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Feuer.AI
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Read the Docs tutorial</a><ul>
+<li><a class="reference internal" href="#getting-started">Getting started</a><ul>
+<li><a class="reference internal" href="#preparing-your-project-on-github">Preparing your project on GitHub</a></li>
+<li><a class="reference internal" href="#sign-up-for-read-the-docs">Sign up for Read the Docs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#first-steps">First steps</a><ul>
+<li><a class="reference internal" href="#importing-the-project-to-read-the-docs">Importing the project to Read the Docs</a></li>
+<li><a class="reference internal" href="#checking-the-first-build">Checking the first build</a></li>
+<li><a class="reference internal" href="#basic-configuration-changes">Basic configuration changes</a></li>
+<li><a class="reference internal" href="#trigger-a-build-from-a-pull-request">Trigger a build from a pull request</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#customizing-the-build-process">Customizing the build process</a><ul>
+<li><a class="reference internal" href="#upgrading-the-python-version">Upgrading the Python version</a></li>
+<li><a class="reference internal" href="#making-warnings-more-visible">Making warnings more visible</a></li>
+<li><a class="reference internal" href="#enabling-pdf-and-epub-builds">Enabling PDF and EPUB builds</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#versioning-documentation">Versioning documentation</a><ul>
+<li><a class="reference internal" href="#creating-a-new-version">Creating a new version</a></li>
+<li><a class="reference internal" href="#modifying-versions">Modifying versions</a></li>
+<li><a class="reference internal" href="#show-a-warning-for-old-versions">Show a warning for old versions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#getting-insights-from-your-projects">Getting insights from your projects</a><ul>
+<li><a class="reference internal" href="#browsing-traffic-analytics">Browsing Traffic Analytics</a></li>
+<li><a class="reference internal" href="#browsing-search-analytics">Browsing Search Analytics</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#where-to-go-from-here">Where to go from here</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Feuer.AI</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Read the Docs tutorial</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/reference.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="read-the-docs-tutorial">
+<h1>Read the Docs tutorial<a class="headerlink" href="#read-the-docs-tutorial" title="Permalink to this heading"></a></h1>
+<p>In this tutorial you will create a documentation project on Read the Docs
+by importing a Sphinx project from a GitHub repository,
+tailor its configuration, and explore several useful features of the platform.</p>
+<p>The tutorial is aimed at people interested in learning
+how to use Read the Docs to host their documentation projects.
+You will fork a fictional software library
+similar to the one developed in the <span class="xref std std-doc">official Sphinx tutorial</span>.
+No prior experience with Sphinx is required
+and you can follow this tutorial without having done the Sphinx one.</p>
+<p>The only things you will need are
+a web browser, an Internet connection, and a GitHub account
+(you can <a class="reference external" href="https://github.com/signup">register for a free account</a> if you don’t have one).
+You will use Read the Docs Community, which means that the project will be public.</p>
+<section id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h2>
+<section id="preparing-your-project-on-github">
+<h3>Preparing your project on GitHub<a class="headerlink" href="#preparing-your-project-on-github" title="Permalink to this heading"></a></h3>
+<p>To start, <a class="reference external" href="https://github.com/login">sign in to GitHub</a>
+and navigate to <a class="reference external" href="https://github.com/readthedocs/tutorial-template/">the tutorial GitHub template</a>,
+where you will see a green <span class="guilabel">Use this template</span> button.
+Click it to open a new page that will ask you for some details:</p>
+<ul class="simple">
+<li><p>Leave the default “Owner”, or change it to something better for a tutorial project.</p></li>
+<li><p>Introduce an appropriate “Repository name”, for example <code class="docutils literal notranslate"><span class="pre">rtd-tutorial</span></code>.</p></li>
+<li><p>Make sure the project is “Public”, rather than “Private”.</p></li>
+</ul>
+<p>After that, click on the green <span class="guilabel">Create repository from template</span> button,
+which will generate a new repository on your personal account
+(or the one of your choosing).
+This is the repository you will import on Read the Docs,
+and it contains the following files:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">README.rst</span></code></dt><dd><p>Basic description of the repository, you will leave it untouched.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code></dt><dd><p>Python project metadata that makes it installable.
+Useful for automatic documentation generation from sources.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">lumache.py</span></code></dt><dd><p>Source code of the fictional Python library.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">docs/</span></code></dt><dd><p>Directory holding all the Sphinx documentation sources,
+including the Sphinx configuration <code class="docutils literal notranslate"><span class="pre">docs/source/conf.py</span></code>
+and the root document <code class="docutils literal notranslate"><span class="pre">docs/source/index.rst</span></code> written in reStructuredText.</p>
+</dd>
+</dl>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="_static/images/tutorial/github-template.png"><img alt="GitHub template for the tutorial" src="_static/images/tutorial/github-template.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">GitHub template for the tutorial</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="sign-up-for-read-the-docs">
+<h3>Sign up for Read the Docs<a class="headerlink" href="#sign-up-for-read-the-docs" title="Permalink to this heading"></a></h3>
+<p>To sign up for a Read the Docs account,
+navigate to the <a class="reference external" href="https://readthedocs.org/accounts/signup/">Sign Up page</a>
+and choose the option <span class="guilabel">Sign up with GitHub</span>.
+On the authorization page, click the green <span class="guilabel">Authorize readthedocs</span> button.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="_static/images/tutorial/github-authorization.png"><img alt="GitHub authorization page" src="_static/images/tutorial/github-authorization.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text">GitHub authorization page</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Read the Docs needs elevated permissions to perform certain operations
+that ensure that the workflow is as smooth as possible,
+like installing webhooks.
+If you want to learn more,
+check out <span class="xref std std-ref">connected-accounts:permissions for connected accounts</span>.</p>
+</div>
+<p>After that, you will be redirected to Read the Docs,
+where you will need to confirm your e-mail and username.
+Clicking the <span class="guilabel">Sign Up »</span> button will create your account
+and redirect you to your <span class="xref std std-term">dashboard</span>.</p>
+<p>By now, you should have two email notifications:</p>
+<ul class="simple">
+<li><p>One from GitHub, telling you that “A third-party OAuth application …
+was recently authorized to access your account”. You don’t need to do
+anything about it.</p></li>
+<li><p>Another one from Read the Docs, prompting you to “verify your email
+address”. Click on the link to finalize the process.</p></li>
+</ul>
+<p>Once done, your Read the Docs account is created
+and ready to import your first project.</p>
+<p>Welcome!</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="_static/images/tutorial/rtd-empty-dashboard.png"><img alt="Read the Docs empty dashboard" src="_static/images/tutorial/rtd-empty-dashboard.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Read the Docs empty dashboard</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Our commercial site offers some extra features,
+like support for private projects.
+You can learn more about <span class="xref std std-doc">our two different sites</span>.</p>
+</div>
+</section>
+</section>
+<section id="first-steps">
+<h2>First steps<a class="headerlink" href="#first-steps" title="Permalink to this heading"></a></h2>
+<section id="importing-the-project-to-read-the-docs">
+<h3>Importing the project to Read the Docs<a class="headerlink" href="#importing-the-project-to-read-the-docs" title="Permalink to this heading"></a></h3>
+<p>To import your GitHub project to Read the Docs,
+first click on the <span class="guilabel">Import a Project</span> button on your dashboard
+(or browse to <a class="reference external" href="https://readthedocs.org/dashboard/import/">the import page</a> directly).
+You should see your GitHub account under the “Filter repositories” list on the right.
+If the list of repositories is empty, click the <a href="#id24"><span class="problematic" id="id25">|:arrows_counterclockwise:|</span></a> button,
+and after that all your repositories will appear on the center.</p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="_static/images/tutorial/rtd-import-projects.gif"><img alt="Import projects workflow" src="_static/images/tutorial/rtd-import-projects.gif" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Import projects workflow</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Locate your <code class="docutils literal notranslate"><span class="pre">rtd-tutorial</span></code> project
+(possibly clicking <span class="guilabel">next ››</span> at the bottom if you have several pages of projects),
+and then click on the <a href="#id26"><span class="problematic" id="id27">|:heavy_plus_sign:|</span></a> button to the right of the name.
+The next page will ask you to fill some details about your Read the Docs project:</p>
+<dl class="simple">
+<dt>Name</dt><dd><p>The name of the project. It has to be unique across all the service,
+so it is better if you prepend your username,
+for example <code class="docutils literal notranslate"><span class="pre">{username}-rtd-tutorial</span></code>.</p>
+</dd>
+<dt>Repository URL</dt><dd><p>The URL that contains the sources. Leave the automatically filled value.</p>
+</dd>
+<dt>Repository type</dt><dd><p>Version control system used, leave it as “Git”.</p>
+</dd>
+<dt>Default branch</dt><dd><p>Name of the default branch of the project, leave it as <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p>
+</dd>
+<dt>Edit advanced project options</dt><dd><p>Leave it unchecked, we will make some changes later.</p>
+</dd>
+</dl>
+<p>After hitting the <span class="guilabel">Next</span> button, you will be redirected to the <span class="xref std std-term">project home</span>.
+You just created your first project on Read the Docs! <a href="#id28"><span class="problematic" id="id29">|:tada:|</span></a></p>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="_static/images/tutorial/rtd-project-home.png"><img alt="Project home" src="_static/images/tutorial/rtd-project-home.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Project home</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="checking-the-first-build">
+<h3>Checking the first build<a class="headerlink" href="#checking-the-first-build" title="Permalink to this heading"></a></h3>
+<p>Read the Docs will try to build the documentation of your project
+right after you create it.
+To see the build logs,
+click on the <span class="guilabel">Your documentation is building</span> link on the <span class="xref std std-term">project home</span>,
+or alternatively navigate to the “Builds” page,
+then open the one on top (the most recent one).</p>
+<p>If the build has not finished yet by the time you open it,
+you will see a spinner next to a “Installing” or “Building” indicator,
+meaning that it is still in progress.</p>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="_static/images/tutorial/rtd-first-successful-build.png"><img alt="First successful documentation build" src="_static/images/tutorial/rtd-first-successful-build.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">First successful documentation build</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>When the build finishes, you will see a green “Build completed” indicator,
+the completion date, the elapsed time,
+and a link to see the corresponding documentation.
+If you now click on <span class="guilabel">View docs</span>, you will see your documentation live!</p>
+<figure class="align-center" id="id9">
+<a class="reference internal image-reference" href="_static/images/tutorial/rtd-first-light.png"><img alt="HTML documentation live on Read the Docs" src="_static/images/tutorial/rtd-first-light.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">HTML documentation live on Read the Docs</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Advertisement is one of our main sources of revenue.
+If you want to learn more about how do we fund our operations
+and explore options to go ad-free,
+check out our <a class="reference external" href="https://readthedocs.org/sustainability/">Sustainability page</a>.</p>
+<p>If you don’t see the ad, you might be using an ad blocker.
+Our EthicalAds network respects your privacy, doesn’t target you,
+and tries to be as unobstrusive as possible,
+so we would like to kindly ask you to <span class="xref std std-doc">not block us</span> <a href="#id30"><span class="problematic" id="id31">|:heart:|</span></a></p>
+</div>
+</section>
+<section id="basic-configuration-changes">
+<h3>Basic configuration changes<a class="headerlink" href="#basic-configuration-changes" title="Permalink to this heading"></a></h3>
+<p>You can now proceed to make some basic configuration adjustments.
+Navigate back to the <span class="xref std std-term">project page</span>
+and click on the <span class="guilabel">⚙ Admin</span> button, which will open the Settings page.</p>
+<p>First of all, add the following text in the description:</p>
+<blockquote>
+<div><p>Lumache (/lu’make/) is a Python library for cooks and food lovers
+that creates recipes mixing random ingredients.</p>
+</div></blockquote>
+<p>Then set the project homepage to <code class="docutils literal notranslate"><span class="pre">https://world.openfoodfacts.org/</span></code>,
+and write <code class="docutils literal notranslate"><span class="pre">food,</span> <span class="pre">python</span></code> in the list of tags.
+All this information will be shown on your project home.</p>
+<p>After that, configure your email so you get a notification if the build fails.
+To do so, click on the <span class="guilabel">Notifications</span> link on the left,
+type the email where you would like to get the notification,
+and click the <span class="guilabel">Add</span> button.
+After that, your email will be shown under “Existing Notifications”.</p>
+</section>
+<section id="trigger-a-build-from-a-pull-request">
+<h3>Trigger a build from a pull request<a class="headerlink" href="#trigger-a-build-from-a-pull-request" title="Permalink to this heading"></a></h3>
+<p>Read the Docs allows you to <span class="xref std std-doc">trigger builds from GitHub pull requests</span>
+and gives you a preview of how the documentation would look like with those changes.</p>
+<p>To enable that functionality, first click on the <span class="guilabel">Advanced Settings</span> link on the left
+under the <span class="guilabel">⚙ Admin</span> menu, check the “Build pull requests for this project” checkbox,
+and click the <span class="guilabel">Save</span> button at the bottom of the page.</p>
+<p>Next, navigate to your GitHub repository, locate the file <code class="docutils literal notranslate"><span class="pre">docs/source/index.rst</span></code>,
+and click on the <a href="#id32"><span class="problematic" id="id33">|:pencil2:|</span></a> icon on the top-right with the tooltip “Edit this file”
+to open a web editor (more information <a class="reference external" href="https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github/editing-files-in-your-repository">on their documentation</a>).</p>
+<figure class="align-center" id="id10">
+<a class="reference internal image-reference" href="_static/images/tutorial/gh-edit.png"><img alt="File view on GitHub before launching the editor" src="_static/images/tutorial/gh-edit.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">File view on GitHub before launching the editor</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>In the editor, add the following sentence to the file:</p>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">docs/source/index.rst</span><a class="headerlink" href="#id11" title="Permalink to this code"></a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Lumache has its documentation hosted on Read the Docs.
+</pre></div>
+</div>
+</div>
+<p>Write an appropriate commit message,
+and choose the “Create a <strong>new branch</strong> for this commit and start a pull request” option,
+typing a name for the new branch.
+When you are done, click the green <span class="guilabel">Propose changes</span> button,
+which will take you to the new pull request page,
+and there click the <span class="guilabel">Create pull request</span> button below the description.</p>
+<figure class="align-center" id="id12">
+<a class="reference internal image-reference" href="_static/images/tutorial/gh-pr-build.png"><img alt="Read the Docs building the pull request from GitHub" src="_static/images/tutorial/gh-pr-build.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Read the Docs building the pull request from GitHub</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>After opening the pull request, a Read the Docs check will appear
+indicating that it is building the documentation for that pull request.
+If you click on the <span class="guilabel">Details</span> link while it is building,
+you will access the build logs,
+otherwise it will take you directly to the documentation.
+When you are satisfied, you can merge the pull request!</p>
+</section>
+</section>
+<section id="customizing-the-build-process">
+<h2>Customizing the build process<a class="headerlink" href="#customizing-the-build-process" title="Permalink to this heading"></a></h2>
+<p>The Settings page of the <span class="xref std std-term">project home</span> allows you
+to change some <em>global</em> configuration values of your project.
+In addition, you can further customize the building process
+using the <code class="docutils literal notranslate"><span class="pre">.readthedocs.yaml</span></code> <span class="xref std std-doc">configuration file</span>.
+This has several advantages:</p>
+<ul class="simple">
+<li><p>The configuration lives next to your code and documentation, tracked by version control.</p></li>
+<li><p>It can be different for every version (more on versioning in the next section).</p></li>
+<li><p>Some configurations are only available using the config file.</p></li>
+</ul>
+<p>Read the Docs works without this configuration
+by <span class="xref std std-ref">making some decisions on your behalf</span>.
+For example, what Python version to use, how to install the requirements, and others.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Settings that apply to the entire project are controlled in the web dashboard,
+while settings that are version or build specific are better in the YAML file.</p>
+</div>
+<section id="upgrading-the-python-version">
+<h3>Upgrading the Python version<a class="headerlink" href="#upgrading-the-python-version" title="Permalink to this heading"></a></h3>
+<p>For example, to explicitly use Python 3.8 to build your project,
+navigate to your GitHub repository, click on the <span class="guilabel">Add file</span> button,
+and add a <code class="docutils literal notranslate"><span class="pre">.readthedocs.yaml</span></code> file with these contents to the root of your project:</p>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">.readthedocs.yaml</span><a class="headerlink" href="#id13" title="Permalink to this code"></a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
+
+<span class="nt">build</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">os</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ubuntu-20.04&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">tools</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.8&quot;</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>The purpose of each key is:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">version</span></code></dt><dd><p>Mandatory, specifies <span class="xref std std-doc">version 2 of the configuration file</span>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">build.os</span></code></dt><dd><p>Required to specify the Python version,
+<span class="xref std std-ref">states the name of the base image</span>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">build.tools.python</span></code></dt><dd><p>Declares the Python version to be used.</p>
+</dd>
+</dl>
+<p>After you commit these changes, go back to your project home,
+navigate to the “Builds” page, and open the new build that just started.
+You will notice that one of the lines contains <code class="docutils literal notranslate"><span class="pre">python3.8</span></code>:
+if you click on it, you will see the full output of the corresponding command,
+stating that it used Python 3.8.6 to create the virtual environment.</p>
+<figure class="align-center" id="id14">
+<a class="reference internal image-reference" href="_static/images/tutorial/build-python3.8.png"><img alt="Read the Docs build using Python 3.8" src="_static/images/tutorial/build-python3.8.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Read the Docs build using Python 3.8</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="making-warnings-more-visible">
+<h3>Making warnings more visible<a class="headerlink" href="#making-warnings-more-visible" title="Permalink to this heading"></a></h3>
+<p>If you navigate to your HTML documentation,
+you will notice that the index page looks correct
+but the API section is empty.
+This is a very common issue with Sphinx,
+and the reason is stated in the build logs.
+On the build page you opened before,
+click on the <span class="guilabel">View raw</span> link on the top right,
+which opens the build logs in plain text,
+and you will see several warnings:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>WARNING: [autosummary] failed to import &#39;lumache&#39;: no module named lumache
+...
+WARNING: autodoc: failed to import function &#39;get_random_ingredients&#39; from module &#39;lumache&#39;; the following exception was raised:
+No module named &#39;lumache&#39;
+WARNING: autodoc: failed to import exception &#39;InvalidKindError&#39; from module &#39;lumache&#39;; the following exception was raised:
+No module named &#39;lumache&#39;
+</pre></div>
+</div>
+<p>To spot these warnings more easily and allow you to address them,
+you can add the <code class="docutils literal notranslate"><span class="pre">sphinx.fail_on_warning</span></code> option to your Read the Docs configuration file.
+For that, navigate to GitHub, locate the <code class="docutils literal notranslate"><span class="pre">.readthedocs.yaml</span></code> file you created earlier,
+click on the <a href="#id34"><span class="problematic" id="id35">|:pencil2:|</span></a> icon, and add these contents:</p>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">.readthedocs.yaml</span><a class="headerlink" href="#id15" title="Permalink to this code"></a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
+
+<span class="nt">build</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">os</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ubuntu-20.04&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">tools</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.8&quot;</span><span class="w"></span>
+
+<span class="hll"><span class="nt">sphinx</span><span class="p">:</span><span class="w"></span>
+</span><span class="hll"><span class="w">  </span><span class="nt">fail_on_warning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+</span></pre></div>
+</div>
+</div>
+<p>At this point, if you navigate back to your “Builds” page,
+you will see a <code class="docutils literal notranslate"><span class="pre">Failed</span></code> build, which is exactly the intended result:
+the Sphinx project is not properly configured yet,
+and instead of rendering an empty API page, now the build fails.</p>
+<p>The reason <code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx:sphinx.ext.autosummary</span></code> and <code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx:sphinx.ext.autodoc</span></code>
+fail to import the code is because it is not installed.
+Luckily, the <code class="docutils literal notranslate"><span class="pre">.readthedocs.yaml</span></code> also allows you to specify
+which requirements to install.</p>
+<p>To install the library code of your project,
+go back to editing <code class="docutils literal notranslate"><span class="pre">.readthedocs.yaml</span></code> on GitHub and modify it as follows:</p>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">.readthedocs.yaml</span><a class="headerlink" href="#id16" title="Permalink to this code"></a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">python</span><span class="p">:</span><span class="w"></span>
+<span class="hll"><span class="w">  </span><span class="c1"># Install our python package before building the docs</span><span class="w"></span>
+</span><span class="hll"><span class="w">  </span><span class="nt">install</span><span class="p">:</span><span class="w"></span>
+</span><span class="hll"><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip</span><span class="w"></span>
+</span><span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>With this change, Read the Docs will install the Python code
+before starting the Sphinx build, which will finish seamlessly.
+If you go now to the API page of your HTML documentation,
+you will see the <code class="docutils literal notranslate"><span class="pre">lumache</span></code> summary!</p>
+</section>
+<section id="enabling-pdf-and-epub-builds">
+<h3>Enabling PDF and EPUB builds<a class="headerlink" href="#enabling-pdf-and-epub-builds" title="Permalink to this heading"></a></h3>
+<p>Sphinx can build several other formats in addition to HTML, such as PDF and EPUB.
+You might want to enable these formats for your project
+so your users can read the documentation offline.</p>
+<p>To do so, add this extra content to your <code class="docutils literal notranslate"><span class="pre">.readthedocs.yaml</span></code>:</p>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">.readthedocs.yaml</span><a class="headerlink" href="#id17" title="Permalink to this code"></a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">sphinx</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">fail_on_warning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+
+<span class="hll"><span class="nt">formats</span><span class="p">:</span><span class="w"></span>
+</span><span class="hll"><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdf</span><span class="w"></span>
+</span><span class="hll"><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">epub</span><span class="w"></span>
+</span></pre></div>
+</div>
+</div>
+<p>After this change, PDF and EPUB downloads will be available
+both from the “Downloads” section of the <span class="xref std std-term">project home</span>,
+as well as the <span class="xref std std-term">flyout menu</span>.</p>
+<figure class="align-center" id="id18">
+<img alt="Downloads available from the flyout menu" src="_static/images/tutorial/flyout-downloads.png" />
+<figcaption>
+<p><span class="caption-text">Downloads available from the flyout menu</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="versioning-documentation">
+<h2>Versioning documentation<a class="headerlink" href="#versioning-documentation" title="Permalink to this heading"></a></h2>
+<p>Read the Docs allows you to have <span class="xref std std-doc">several versions of your documentation</span>,
+in the same way that you have several versions of your code.
+By default, it creates a <code class="docutils literal notranslate"><span class="pre">latest</span></code> version
+that points to the default branch of your version control system
+(<code class="docutils literal notranslate"><span class="pre">main</span></code> in the case of this tutorial),
+and that’s why the URLs of your HTML documentation contain the string <code class="docutils literal notranslate"><span class="pre">/latest/</span></code>.</p>
+<section id="creating-a-new-version">
+<h3>Creating a new version<a class="headerlink" href="#creating-a-new-version" title="Permalink to this heading"></a></h3>
+<p>Let’s say you want to create a <code class="docutils literal notranslate"><span class="pre">1.0</span></code> version of your code,
+with a corresponding <code class="docutils literal notranslate"><span class="pre">1.0</span></code> version of the documentation.
+For that, first navigate to your GitHub repository, click on the branch selector,
+type <code class="docutils literal notranslate"><span class="pre">1.0.x</span></code>, and click on “Create branch: 1.0.x from ‘main’”
+(more information <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository">on their documentation</a>).</p>
+<p>Next, go to your <span class="xref std std-term">project home</span>, click on the <span class="guilabel">Versions</span> button,
+and under “Active Versions” you will see two entries:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">latest</span></code> version, pointing to the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch.</p></li>
+<li><p>A new <code class="docutils literal notranslate"><span class="pre">stable</span></code> version, pointing to the <code class="docutils literal notranslate"><span class="pre">origin/1.0.x</span></code> branch.</p></li>
+</ul>
+<figure class="align-center" id="id19">
+<a class="reference internal image-reference" href="_static/images/tutorial/active-versions.png"><img alt="List of active versions of the project" src="_static/images/tutorial/active-versions.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">List of active versions of the project</span><a class="headerlink" href="#id19" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Right after you created your branch,
+Read the Docs created a new special version called <code class="docutils literal notranslate"><span class="pre">stable</span></code> pointing to it,
+and started building it. When the build finishes,
+the <code class="docutils literal notranslate"><span class="pre">stable</span></code> version will be listed in the <span class="xref std std-term">flyout menu</span>
+and your readers will be able to choose it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Read the Docs <span class="xref std std-ref">follows some rules</span>
+to decide whether to create a <code class="docutils literal notranslate"><span class="pre">stable</span></code> version pointing to your new branch or tag.
+To simplify, it will check if the name resembles a version number
+like <code class="docutils literal notranslate"><span class="pre">1.0</span></code>, <code class="docutils literal notranslate"><span class="pre">2.0.3</span></code> or <code class="docutils literal notranslate"><span class="pre">4.x</span></code>.</p>
+</div>
+<p>Now you might want to set <code class="docutils literal notranslate"><span class="pre">stable</span></code> as the <em>default version</em>,
+rather than <code class="docutils literal notranslate"><span class="pre">latest</span></code>,
+so that users see the <code class="docutils literal notranslate"><span class="pre">stable</span></code> documentation
+when they visit the <span class="xref std std-term">root URL</span> of your documentation
+(while still being able to change the version in the flyout menu).</p>
+<p>For that, go to the <span class="guilabel">Advanced Settings</span> link
+under the <span class="guilabel">⚙ Admin</span> menu of your project home,
+choose <code class="docutils literal notranslate"><span class="pre">stable</span></code> in the “Default version*” dropdown,
+and hit <span class="guilabel">Save</span> at the bottom.
+Done!</p>
+</section>
+<section id="modifying-versions">
+<h3>Modifying versions<a class="headerlink" href="#modifying-versions" title="Permalink to this heading"></a></h3>
+<p>Both <code class="docutils literal notranslate"><span class="pre">latest</span></code> and <code class="docutils literal notranslate"><span class="pre">stable</span></code> are now <em>active</em>, which means that
+they are visible for users, and new builds can be triggered for them.
+In addition to these, Read the Docs also created an <em>inactive</em> <code class="docutils literal notranslate"><span class="pre">1.0.x</span></code>
+version, which will always point to the <code class="docutils literal notranslate"><span class="pre">1.0.x</span></code> branch of your repository.</p>
+<figure class="align-center" id="id20">
+<a class="reference internal image-reference" href="_static/images/tutorial/inactive-versions.png"><img alt="List of inactive versions of the project" src="_static/images/tutorial/inactive-versions.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">List of inactive versions of the project</span><a class="headerlink" href="#id20" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Let’s activate the <code class="docutils literal notranslate"><span class="pre">1.0.x</span></code> version.
+For that, go to the “Versions” on your <span class="xref std std-term">project home</span>,
+locate <code class="docutils literal notranslate"><span class="pre">1.0.x</span></code> under “Activate a version”,
+and click on the <span class="guilabel">Activate</span> button.
+This will take you to a new page with two checkboxes,
+“Active” and “Hidden”. Check only “Active”,
+and click <span class="guilabel">Save</span>.</p>
+<p>After you do this, <code class="docutils literal notranslate"><span class="pre">1.0.x</span></code> will appear on the “Active Versions” section,
+and a new build will be triggered for it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can read more about <span class="xref std std-ref">hidden versions</span>
+in our documentation.</p>
+</div>
+</section>
+<section id="show-a-warning-for-old-versions">
+<h3>Show a warning for old versions<a class="headerlink" href="#show-a-warning-for-old-versions" title="Permalink to this heading"></a></h3>
+<p>When your project matures, the number of versions might increase.
+Sometimes you will want to warn your readers
+when they are browsing an old or outdated version of your documentation.</p>
+<p>To showcase how to do that, let’s create a <code class="docutils literal notranslate"><span class="pre">2.0</span></code> version of the code:
+navigate to your GitHub repository, click on the branch selector,
+type <code class="docutils literal notranslate"><span class="pre">2.0.x</span></code>, and click on “Create branch: 2.0.x from ‘main’”.
+This will trigger two things:</p>
+<ul class="simple">
+<li><p>Since <code class="docutils literal notranslate"><span class="pre">2.0.x</span></code> is your newest branch, <code class="docutils literal notranslate"><span class="pre">stable</span></code> will switch to tracking it.</p></li>
+<li><p>A new <code class="docutils literal notranslate"><span class="pre">2.0.x</span></code> version will be created on your Read the Docs project.</p></li>
+<li><p>Since you already have an active <code class="docutils literal notranslate"><span class="pre">stable</span></code> version, <code class="docutils literal notranslate"><span class="pre">2.0.x</span></code> will be activated.</p></li>
+</ul>
+<p>From this point, <code class="docutils literal notranslate"><span class="pre">1.0.x</span></code> version is no longer the most up to date one.
+To display a warning to your readers, go to the <span class="guilabel">⚙ Admin</span> menu of your project home,
+click on the <span class="guilabel">Advanced Settings</span> link on the left,
+enable the “Show version warning” checkbox, and click the <span class="guilabel">Save</span> button.</p>
+<p>If you now browse the <code class="docutils literal notranslate"><span class="pre">1.0.x</span></code> documentation, you will see a warning on top
+encouraging you to browse the latest version instead. Neat!</p>
+<figure class="align-center" id="id21">
+<a class="reference internal image-reference" href="_static/images/tutorial/old-version-warning.png"><img alt="Warning for old versions" src="_static/images/tutorial/old-version-warning.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Warning for old versions</span><a class="headerlink" href="#id21" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="getting-insights-from-your-projects">
+<h2>Getting insights from your projects<a class="headerlink" href="#getting-insights-from-your-projects" title="Permalink to this heading"></a></h2>
+<p>Once your project is up and running, you will probably want to understand
+how readers are using your documentation, addressing some common questions like:</p>
+<ul class="simple">
+<li><p>what pages are the most visited pages?</p></li>
+<li><p>what search terms are the most frequently used?</p></li>
+<li><p>are readers finding what they look for?</p></li>
+</ul>
+<p>Read the Docs offers you some analytics tools to find out the answers.</p>
+<section id="browsing-traffic-analytics">
+<h3>Browsing Traffic Analytics<a class="headerlink" href="#browsing-traffic-analytics" title="Permalink to this heading"></a></h3>
+<p>The <span class="xref std std-doc">/analytics</span> view shows the top viewed documentation pages of the past 30 days,
+plus a visualization of the daily views during that period.
+To generate some artificial views on your newly created project,
+you can first click around the different pages of your project,
+which will be accounted immediately for the current day statistics.</p>
+<p>To see the Traffic Analytics view, go back the <span class="xref std std-term">project page</span> again,
+click on the <span class="guilabel">⚙ Admin</span> button,
+and then click on the <span class="guilabel">Traffic Analytics</span> section.
+You will see the list of pages in descending order of visits,
+as well as a plot similar to the one below.</p>
+<figure class="align-center" id="id22">
+<a class="reference internal image-reference" href="_static/images/tutorial/traffic-analytics-plot.png"><img alt="Traffic Analytics plot" src="_static/images/tutorial/traffic-analytics-plot.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Traffic Analytics plot</span><a class="headerlink" href="#id22" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Traffic Analytics view explained above gives you a simple overview
+of how your readers browse your documentation. It has the advantage that
+it stores no identifying information about your visitors,
+and therefore it respects their privacy.
+However, you might want to get more detailed data by
+<span class="xref std std-ref">enabling Google Analytics</span>.
+Notice though that we take some extra measures to <span class="xref std std-ref">respect user
+privacy</span>
+when they visit projects that have Google Analytics enabled,
+and this might reduce the number of visits counted.</p>
+</div>
+<p>Finally, you can also download this data for closer inspection.
+To do that, scroll to the bottom of the page
+and click on the <span class="guilabel">Download all data</span> button.
+That will prompt you to download a <abbr title="Comma-Separated Values">CSV</abbr> file
+that you can process any way you want.</p>
+</section>
+<section id="browsing-search-analytics">
+<h3>Browsing Search Analytics<a class="headerlink" href="#browsing-search-analytics" title="Permalink to this heading"></a></h3>
+<p>Apart from traffic analytics, Read the Docs also offers the possibility
+to inspect <span class="xref std std-ref">what search terms your readers use</span>
+on your documentation.
+This can inform decisions on what areas to reinforce,
+or what parts of your project are less understood or more difficult to find.</p>
+<p>To generate some artificial search statistics on the project,
+go to the HTML documentation, locate the Sphinx search box on the left,
+type <code class="docutils literal notranslate"><span class="pre">ingredients</span></code>, and press the <kbd class="kbd docutils literal notranslate">Enter</kbd> key.
+You will be redirected to the search results page, which will show two entries.</p>
+<p>Next, go back to the <span class="guilabel">⚙ Admin</span> section of your project page,
+and then click on the <span class="guilabel">Search Analytics</span> section.
+You will see a table with the most searched queries
+(including the <code class="docutils literal notranslate"><span class="pre">ingredients</span></code> one you just typed),
+how many results did each query return, and how many times it was searched.
+Below the queries table, you will also see a visualization
+of the daily number of search queries during the past 30 days.</p>
+<figure class="align-center" id="id23">
+<a class="reference internal image-reference" href="_static/images/tutorial/search-analytics-terms.png"><img alt="Most searched terms" src="_static/images/tutorial/search-analytics-terms.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Most searched terms</span><a class="headerlink" href="#id23" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Like the Traffic Analytics, you can also download the whole dataset in CSV format
+by clicking on the <span class="guilabel">Download all data</span> button.</p>
+</section>
+</section>
+<section id="where-to-go-from-here">
+<h2>Where to go from here<a class="headerlink" href="#where-to-go-from-here" title="Permalink to this heading"></a></h2>
+<p>This is the end of the tutorial. You started by forking a GitHub repository
+and importing it on Read the Docs, building its HTML documentation,
+and then went through a series of steps to customize the build process,
+tweak the project configuration, and add new versions.</p>
+<p>Here you have some resources to continue learning about documentation
+and Read the Docs:</p>
+<ul class="simple">
+<li><p>You can learn more about the functionality of the platform
+by going over our <span class="xref std std-doc">/features</span> page.</p></li>
+<li><p>To make the most of the documentation generators that are supported,
+you can read the <span class="xref std std-doc">Sphinx tutorial</span>
+or the <a class="reference external" href="https://www.mkdocs.org/user-guide/">MkDocs User Guide</a>.</p></li>
+<li><p>Display example projects and read the source code in <span class="xref std std-doc">/examples</span>.</p></li>
+<li><p>Whether you are a documentation author, a project administrator, a developer, or a designer,
+you can follow our how-to guides that cover specific tasks,
+available under <span class="xref std std-doc">/guides/index</span>.</p></li>
+<li><p>You can check out some of the
+<span class="xref std std-ref">index:Advanced features of Read the Docs</span>,
+like <span class="xref std std-doc">/subprojects</span> or <span class="xref std std-doc">/automation-rules</span>, to name a few.</p></li>
+<li><p>For private project support and other enterprise features,
+you can use <span class="xref std std-doc">our commercial service</span>
+(and if in doubt, check out <span class="xref std std-doc">/choosing-a-site</span>).</p></li>
+<li><p>Do you want to join a global community of fellow <cite>documentarians &lt;writethedocs:documentarians&gt;</cite>?
+Check out <a class="reference external" href="https://www.writethedocs.org/">Write the Docs</a> and
+<span class="xref std std-doc">its Slack workspace</span>.</p></li>
+<li><p>Do you want to contribute to Read the Docs?
+We greatly appreciate it! Check out <span class="xref std std-doc">rtd-dev:contribute</span>.</p></li>
+</ul>
+<p>Happy documenting!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Santosh.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

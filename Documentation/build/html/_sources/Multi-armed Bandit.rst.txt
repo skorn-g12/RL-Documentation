@@ -1,0 +1,5 @@
+Multi-Armed Bandit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Here's a `link <https://towardsdatascience.com/multi-armed-bandits-and-reinforcement-learning-dc9001dcb8da>`_ 
+to Towards Data Science that has a pretty good explanation of multi-armed bandits and a very important concept of epsilon-greedy. 
