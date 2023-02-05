@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Feuer.AI
+Orion.AI
 ====================================
 The final goal is to be able to come up with a myriad of Minecraft bots that do specialized tasks.  
 But let's start at the beginning first. We will be using `OpenAI's gym <https://gymnasium.farama.org/>`_
@@ -25,10 +25,3 @@ But let's start at the beginning first. We will be using `OpenAI's gym <https://
 
 
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

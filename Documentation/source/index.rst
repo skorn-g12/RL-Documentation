@@ -25,10 +25,3 @@ But let's start at the beginning first. We will be using `OpenAI's gym <https://
 
 
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
