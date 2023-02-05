@@ -2,7 +2,7 @@ RL Basics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 I will share some good links I found to understand the basics of RL. 
-I recommend the following flow to get a complete understanding of it:
+I recommend the following flow to get a complete understanding of RL:
 
 
 Multi-armed Bandit
