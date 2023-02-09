@@ -1,8 +1,7 @@
-RL Basics
+Resources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-I will share some good links I found to understand the basics of RL. 
-I recommend the following flow to get a complete understanding of RL:
+I'll try to accumulate some links that I found to be quite useful. This is still a *TO DO* : )
 
 
 Multi-armed Bandit
@@ -22,7 +21,6 @@ Markov Decision Processes
 Dynamic Programming
 ==================
 It is exactly what you think. Reusing earlier results to compute new results.
-It is important for RL since we approximate the expected value of something as the average of the results you have accumulated so far.
 
 
 Monte Carlo

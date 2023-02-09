@@ -6,21 +6,25 @@
 Orion.AI
 ====================================
 The final goal is to be able to come up with a myriad of Minecraft bots that do specialized tasks.  
-But let's start at the beginning first. We will be using `OpenAI's gym <https://gymnasium.farama.org/>`_
+But let's start at the beginning. We will be using `OpenAI's gym <https://gymnasium.farama.org/>`_ for our experimentation.
+Even MineRL's APIs are just like other gym environments.
 
 .. note::
    All development of Gym has been moved to Gymnasium, a new package in the Farama Foundation that's maintained 
-   by the same team of developers who have maintained Gym for the past 18 months. 
+   by the same team of developers who have maintained Gym for the past 18 months. So if you see Gym anywhere in the doc,
+   it just means Gymnasium : )
 
 
 
 
 
 .. toctree::
-
-    Gym Workflow
-    RL Basics
-
+   :caption: Navigation
+   :titlesonly:
+   
+   The basics-Gridworld
+   Gym Workflow
+   Resources
 
 
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gym Workflow &mdash; Feuer.AI  documentation</title>
+  <title>Resources &mdash; Feuer.AI  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -39,7 +39,15 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Gym Workflow</a></li>
+<li><a class="reference internal" href="#">Resources</a><ul>
+<li><a class="reference internal" href="#multi-armed-bandit">Multi-armed Bandit</a></li>
+<li><a class="reference internal" href="#markov-decision-processes">Markov Decision Processes</a></li>
+<li><a class="reference internal" href="#dynamic-programming">Dynamic Programming</a></li>
+<li><a class="reference internal" href="#monte-carlo">Monte Carlo</a></li>
+<li><a class="reference internal" href="#td-learning">TD Learning</a></li>
+<li><a class="reference internal" href="#approximation-methods">Approximation Methods</a></li>
+</ul>
+</li>
 </ul>
 </div>
         </div>
@@ -56,9 +64,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Gym Workflow</li>
+      <li class="breadcrumb-item active">Resources</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/Gym Workflow.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/Resources.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -66,20 +74,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="gym-workflow">
-<h1>Gym Workflow<a class="headerlink" href="#gym-workflow" title="Permalink to this heading"></a></h1>
-<p>Let’s focus on the <a class="reference external" href="https://gymnasium.farama.org/environments/classic_control/cart_pole/">cartpole environment</a> .</p>
-<p>Understand the action space, observation space, the end goal, the terminating conditions for an episode is important.</p>
-<p>This is how you would run one episode of CartPole, wherein the agent just takes random actions</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;CartPole-v1&#39;</span><span class="p">)</span>
-<span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
-<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
-   <span class="n">a</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
-   <span class="n">obs</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-   <span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
-</pre></div>
-</div>
+  <section id="resources">
+<h1>Resources<a class="headerlink" href="#resources" title="Permalink to this heading"></a></h1>
+<p>I’ll try to accumulate some links that I found to be quite useful. This is still a <em>TO DO</em> : )</p>
+<section id="multi-armed-bandit">
+<h2>Multi-armed Bandit<a class="headerlink" href="#multi-armed-bandit" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://towardsdatascience.com/multi-armed-bandits-and-reinforcement-learning-dc9001dcb8da">TowardsDataScience</a></p>
+<p>The above link has a good explanation of epsilon-greedy as well.</p>
+</section>
+<section id="markov-decision-processes">
+<h2>Markov Decision Processes<a class="headerlink" href="#markov-decision-processes" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://www.spiceworks.com/tech/artificial-intelligence/articles/what-is-markov-decision-process/">SpiceWorks</a></p>
+</section>
+<section id="dynamic-programming">
+<h2>Dynamic Programming<a class="headerlink" href="#dynamic-programming" title="Permalink to this heading"></a></h2>
+<p>It is exactly what you think. Reusing earlier results to compute new results.</p>
+</section>
+<section id="monte-carlo">
+<h2>Monte Carlo<a class="headerlink" href="#monte-carlo" title="Permalink to this heading"></a></h2>
+<p>It is a fancy way of saying “compute the average”</p>
+</section>
+<section id="td-learning">
+<h2>TD Learning<a class="headerlink" href="#td-learning" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://towardsdatascience.com/temporal-difference-learning-47b4a7205ca8">TowardsDataScience</a></p>
+</section>
+<section id="approximation-methods">
+<h2>Approximation Methods<a class="headerlink" href="#approximation-methods" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://towardsdatascience.com/function-approximation-in-reinforcement-learning-85a4864d566#:~:text=In%20summary%20the%20function%20approximation,computation%20time%20and%20memory%20space.">TowardsDataScience</a></p>
+</section>
 </section>
 
 

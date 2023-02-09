@@ -19,10 +19,12 @@ Even MineRL's APIs are just like other gym environments.
 
 
 .. toctree::
-
-    Gym Workflow
-    RL Basics
-
+   :caption: Navigation
+   :titlesonly:
+   
+   The basics-Gridworld
+   Gym Workflow
+   Resources
 
 
 
