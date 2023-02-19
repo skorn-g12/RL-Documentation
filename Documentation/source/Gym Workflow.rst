@@ -101,4 +101,5 @@ But let's try to use sklearn's SGDRegressor instead. The important thing to note
       # Update s
       s = s2
 
+
 Now that we know this, next step is build a simple DL network that approximates Q function instead of a linear regression model.
