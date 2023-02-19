@@ -209,7 +209,7 @@ The pseudocode for this goes something like:
          a = epsilon-greedy(s)
          s2, r = env.move(a)
          a2 = argmax(Q(s2, :))
-         Q[(s, a)] = Q[(s, a)] + alpha * (r + gamma * Q[(s2, a2)] - Q[(s, a)])
+         Q[(s, a)] = Q[(s, a)] + alpha * (r + gamma * Q[(s2, amax)] - Q[(s, a)])
          s = s2
 
    # Best policy learned by agent
