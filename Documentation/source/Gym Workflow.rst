@@ -23,6 +23,9 @@ Here's the code for running one episode of cart pole, where the agent takes rand
 
 Let's apply basic RL on this
 ========================================
+
+Linear Regression model using SGDRegressor()
+============================================
 It is not wise to maintain a Q table for every state-action pair. The number of states is practically infinite in most cases. 
 So we approximate the Q function with a model. 
 I'm going to begin with modeling the Q function with a linear model:
@@ -102,4 +105,18 @@ But let's try to use sklearn's SGDRegressor instead. The important thing to note
       s = s2
 
 
+Deep Q learning
+===============
+
 Now that we know this, next step is build a simple DL network that approximates Q function instead of a linear regression model.
+Therefore, replace SGDRegressor() with your own model and you would have implemented **Deep QN**. This is what I did:
+::
+
+   model = models.Sequential()
+            model.add(layers.Dense(64, input_shape=(100,), activation="relu"))
+            model.add(layers.Dense(32, activation="relu"))
+            model.add(layers.Dense(1, activation=None))
+            optimizer = "adam"
+            model.compile(optimizer=optimizer, loss="mean_squared_error", metrics=["mean_squared_error"])
+
+But you could play around with the loss function & neurons to get a better performance. Also, I have continued to use RBFSampler(), but I can probably do away with that now that we have a neural network. Incidentally, *input_shape* depends on the type of input you're using(It's not always (100, ))
