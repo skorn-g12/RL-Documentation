@@ -47,7 +47,7 @@ But let's try to use sklearn's SGDRegressor instead. The important thing to note
 
 .. note::
    Q function is non-linear, by nature. Therefore, we cannot directly apply a linear model like this. We will use some feature transformer like RBFSampler() or Nystroem() from sklearn.
-   Initiially, we will play a bunch of episodes wherein the agent takes random actions and store the state-action pairs encountered in a list. This list will be used to fit the featurizer. 
+   Initially, we will play a bunch of episodes wherein the agent takes random actions and store the state-action pairs encountered in a list. This list will be used to fit the featurizer. 
 
 - Here's the pseudocode for setting up the featurizer & model:
 
@@ -109,7 +109,7 @@ Deep Q learning
 ===============
 
 Now that we know this, next step is build a simple DL network that approximates Q function instead of a linear regression model.
-Therefore, replace SGDRegressor() with your own model and you would have implemented **Deep QN**. This is what I did:
+Therefore, replace SGDRegressor() with your own model and you would have implemented **Deep QN**. This is what I tried:
 ::
 
    model = models.Sequential()
