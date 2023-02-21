@@ -13,5 +13,6 @@ All you need to do is run the following:
 The reason for choosing this environment is because we are going to start looking at some seminal papers of RL. Starting with what I like to call
 
 
-`The Experience replay paper  <https://gymnasium.farama.org/environments/classic_control/cart_pole/>`_ 
+
+`The Experience replay paper  <https://web.stanford.edu/class/psych209/Readings/MnihEtAlHassibis15NatureControlDeepRL.pdf>`_ 
 ========================================================================================================================
