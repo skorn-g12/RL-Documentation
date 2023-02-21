@@ -24,6 +24,7 @@ Even MineRL's APIs are just like other gym environments.
    
    The basics-Gridworld
    Gym Workflow
+   Atari Environments
    Resources
 
 
