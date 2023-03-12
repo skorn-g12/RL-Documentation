@@ -28,6 +28,7 @@ Important takeaways from the paper are the following:
 	- Downscale to (84, 84)
 	- The input to the agent will a batch of 4 frames of size (84, 84) resulting in a tensor of shape (84, 84, 4)
 
+
 2. Actions taken by the agent will be replicated for 4 frames.
 
 3. An experience replay buffer must be implemented to account for the highly correlated samples, if taken from (say) one episode. This way, you could just
